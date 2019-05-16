@@ -17,6 +17,14 @@ public class Day3 {
         }
     }
 
+    @Test
+    public void test010() {
+        for (int i = 1; i <= 20; i++) {
+            if (i % 2 == 1) printValue(i);
+
+        }
+    }
+
     private void swap(int[] array, int indexL, int indexR) {
         int temp = array[indexL];
         array[indexL] = array[indexR];
