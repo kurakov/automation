@@ -79,7 +79,7 @@ public class Day3 {
 
     @Test
     public void testReverseString() {
-        String inputString = "MyValuevalue";
+        String inputString = "MyValuevaluer";
 
         String reverse = "";
 
