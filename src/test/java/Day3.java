@@ -78,8 +78,8 @@ public class Day3 {
 
 
     @Test
-    public void testReverseString() {
-        String inputString = "MyValueer";
+    public void testReverseStrg() {
+        String inputString = "MyValuegit push automationer";
 
         String reverse = "";
 
