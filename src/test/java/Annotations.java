@@ -51,7 +51,7 @@ public class Annotations {
 
     @AfterSuite
     public void afterSuite() {
-        System.out.println("in afterSuite");
+        System.out.println("in afterSuitee");
     }
 
 }
