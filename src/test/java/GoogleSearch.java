@@ -5,16 +5,36 @@ import org.openqa.selenium.firefox.FirefoxDriver;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.WebDriverWait;
 import org.testng.Assert;
+import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
+import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
 public class GoogleSearch {
 
     WebDriver driver;
 
-    @Test
-    public void test001() {
+    @BeforeSuite
+    public void beforeSuite() {
         System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver");
         driver = new FirefoxDriver();
+    }
+
+    @AfterMethod
+    public void afterMethod() {
+        driver.manage().deleteAllCookies();
+    }
+
+
+    @AfterSuite
+    public void afterSuite() {
+        driver.close();
+    }
+
+
+    @Test
+    public void test001() {
+        String textValue = "portnov computer school";
 
 
         openMainPage();
@@ -25,10 +45,6 @@ public class GoogleSearch {
 
     }
 
-    //TODO: automate search scenario on Bing.com
-    @Test
-    public void test002() {
-    }
 
 
     private void waitForResults() {
