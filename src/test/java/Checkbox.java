@@ -26,7 +26,7 @@ public class Checkbox {
     }
 
 
-    //TODO: REFACTOR into user actions steps
+    //TODO: REFACTOR into user actions stepss
 
     @Test
     public void test001() {
