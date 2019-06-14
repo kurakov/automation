@@ -19,7 +19,7 @@ public class Checkbox {
         driver = new FirefoxDriver();
     }
 
-    //TODO: add more scenarioss
+    //TODO: add more scenarios
     @Test
     public void test002() {
 
