@@ -17,7 +17,9 @@ public class GoogleSearch {
     @BeforeSuite
     public void beforeSuite() {
         System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/geckodriver");
+//        System.setProperty("webdriver.gecko.driver", "src/test/resources/drivers/chromedriver");
         driver = new FirefoxDriver();
+
     }
 
     @AfterMethod
@@ -35,6 +37,20 @@ public class GoogleSearch {
     @Test
     public void test001() {
         String textValue = "portnov computer school";
+
+
+        openMainPage();
+        typeQuery();
+        submitSerach();
+        waitForResults();
+        assertResultPage();
+
+    }
+
+
+    @Test
+    public void test002() {
+        String textValue = "#@#@!$!!#!@!";
 
 
         openMainPage();
