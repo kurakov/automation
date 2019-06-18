@@ -19,6 +19,8 @@ public class Checkbox {
         driver = new FirefoxDriver();
     }
 
+    //TODO: find a different of checking if checkbox is selected
+
     //TODO: add more scenarios
     @Test
     public void test002() {
