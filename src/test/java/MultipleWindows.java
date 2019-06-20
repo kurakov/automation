@@ -3,6 +3,7 @@ import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.WebElement;
 import org.openqa.selenium.firefox.FirefoxDriver;
 import org.testng.Assert;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeSuite;
 import org.testng.annotations.Test;
 
@@ -50,9 +51,33 @@ public class MultipleWindows {
         String windowHandle1 = (String) allWindowHandles.toArray()[0];
         String windowHandle2 = (String) allWindowHandles.toArray()[1];
 
+        driver.switchTo().window(windowHandle2);
+
+        String pageSource = driver.getPageSource();
+
+        String textToCheck = "New Window";
+
+
+        boolean isTextThere = pageSource.contains(textToCheck);
+
+        Assert.assertTrue(isTextThere);
+
+
         driver.switchTo().window(windowHandle1);
+
+        String windowTitle = driver.getTitle();
+
+        String titlePartialText = "Internet";
+        boolean isTitleContainText = windowTitle.contains(titlePartialText);
+
+        Assert.assertTrue(isTitleContainText);
+
 
     }
 
+    @AfterSuite
+    public void afterSuite() {
 
+        driver.quit();
+    }
 }
