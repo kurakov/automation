@@ -27,6 +27,8 @@ public class MultipleWindows {
         driver = new FirefoxDriver();
     }
 
+    //todo: create a different scenarios
+    //todo: refactor into user actions stepy
     @Test
     public void test001() {
         driver.get("https://the-internet.herokuapp.com/windows");
