@@ -30,7 +30,7 @@ public class xpath {
         String xpath9 = "(//input[@type='text'])[last()]";
         String xpath10 = "(//input[@type='text'])[position()=2]";
         String xpath11 = "(//input[@type='text'])[2]";
-//        String xpath12 = "//*[@id='FirstName']/following::input[@type='text']";
-//        String xpath13 = "//*[@id='LastName']//preceding::input[@type='text']";
+        String xpath12 = "//*[@type='text']//following::input[@name='password']";
+        String xpath13 = "//*[@type='text']//preceding::input[@name='password']";
     }
 }
