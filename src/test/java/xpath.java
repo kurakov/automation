@@ -32,5 +32,6 @@ public class xpath {
         String xpath11 = "(//input[@type='text'])[2]";
         String xpath12 = "//*[@type='text']//following::input[@name='password']";
         String xpath13 = "//*[@type='text']//preceding::input[@name='password']";
+
     }
 }
